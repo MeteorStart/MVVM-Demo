@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+                name="readViewModel"
+                type="com.x_meteor.mvvm_demo.viewmodel.ReadViewModel"/>
+
+        <variable
+                name="gankModel"
+                type="com.x_meteor.mvvm_demo.model.GankModel.ResultsBean"/>
+    </data>
+
+    <RelativeLayout
+            android:background="@color/app_color_theme_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <TextView
+                android:id="@+id/tvShow"
+                android:layout_width="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/colorPrimary"
+                android:textSize="30dp"
+                android:text="@{String.valueOf(gankModel.used)}"
+                android:layout_height="wrap_content"/>
+
+
+        <Button
+                android:id="@+id/btnGet"
+                android:layout_width="match_parent"
+                android:text="获取数据"
+                android:onClick="@{()->readViewModel.getGankInfo()}"
+                android:layout_alignParentBottom="true"
+                android:layout_height="wrap_content"/>
+    </RelativeLayout>
+</layout>

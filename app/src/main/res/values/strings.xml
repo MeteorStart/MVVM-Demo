@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">MVVM-Demo</string>
+
+    <string name="main_home">首页</string>
+    <string name="main_read">资讯</string>
+    <string name="main_repository">干货</string>
+    <string name="main_my">我的</string>
+
+    <string name="search_transition_name">transition_reveal</string>
+
+
+    <string name="loading_text">加载中&#8230;</string>
+    <string name="no_network">请检查网络后点击重新加载</string>
+    <string name="data_error">数据获取失败(ㄒoㄒ)~~</string>
+    <string name="empty_view_hint">暂时木有内容呀~~</string>
+    <string name="splash_text">每日精选视频，让你大开眼界</string>
+</resources>

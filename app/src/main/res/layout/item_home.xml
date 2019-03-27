@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tool="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+                name="item"
+                type="com.x_meteor.mvvm_demo.model.GankModel.ResultsBean"/>
+
+        <variable
+                name="imageUrl"
+                type="String"/>
+
+    </data>
+
+    <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="12dp"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:padding="15dp"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:padding="15dp"
+                    android:layout_height="wrap_content">
+
+                <ImageView
+                        app:image="@{imageUrl}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        tool:text="#标题"
+                        android:text="@{item.desc}"
+                        android:textSize="16dp"
+                        android:textColor="@color/app_color_theme_1"
+                        android:layout_width="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_height="wrap_content"/>
+            </RelativeLayout>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/app_color_theme_1"
+                    android:layout_height="1dp"/>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        tool:text="作者"
+                        android:text="@{item.who}"
+                        android:textSize="16dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:textSize="16dp"
+                        android:text="@{item.createdAt}"
+                        tool:text="2018/11/21"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+</layout>
